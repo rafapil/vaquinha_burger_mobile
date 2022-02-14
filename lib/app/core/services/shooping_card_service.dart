@@ -13,6 +13,14 @@ class ShoopingCardService extends GetxService {
 
   ShoopingCardModel? getById(int id) => _shoopingCard[id];
 
+  double get totalValue {
+    return _shoopingCard.values.fold(0, (totalValue, shoopingCardModel) {
+      totalValue +=
+          shoopingCardModel.product.price * shoopingCardModel.quantity;
+      return totalValue;
+    });
+  }
+
   //
   void addAndRemoveProductsInShoopingCard(
     ProductModel product, {
@@ -29,4 +37,6 @@ class ShoopingCardService extends GetxService {
       });
     }
   }
+
+  void clear() => _shoopingCard.clear();
 }

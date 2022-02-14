@@ -6,6 +6,7 @@ import 'package:vaquinha_burger_mobile/app/core/ui/vakinha_ui.dart';
 import 'package:vaquinha_burger_mobile/app/modules/home/home_controller.dart';
 import 'package:vaquinha_burger_mobile/app/routes/auth_routers.dart';
 import 'package:vaquinha_burger_mobile/app/routes/home_routers.dart';
+import 'package:vaquinha_burger_mobile/app/routes/orders_router.dart';
 import 'package:vaquinha_burger_mobile/app/routes/product_routers.dart';
 import 'package:vaquinha_burger_mobile/app/routes/splash_routes.dart';
 
@@ -28,6 +29,7 @@ class VakinhaBurgerMainApp extends StatelessWidget {
         ...AuthRouters.routers,
         ...HomeRouters.routers,
         ...ProductRouters.routers,
+        ...OrdersRouter.routers,
       ],
     );
   }

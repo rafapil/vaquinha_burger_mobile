@@ -4,6 +4,8 @@ import 'package:vaquinha_burger_mobile/app/core/services/auth_service.dart';
 import 'package:vaquinha_burger_mobile/app/core/services/shooping_card_service.dart';
 import 'package:vaquinha_burger_mobile/app/modules/menu/menu_bindings.dart';
 import 'package:vaquinha_burger_mobile/app/modules/menu/menu_page.dart';
+import 'package:vaquinha_burger_mobile/app/modules/order/shooping_card/shooping_card_bindings.dart';
+import 'package:vaquinha_burger_mobile/app/modules/order/shooping_card/shooping_card_page.dart';
 
 class HomeController extends GetxController {
   static const NAVIGASTOR_KEY = 1;
@@ -37,6 +39,13 @@ class HomeController extends GetxController {
       );
     }
     // no video estava shopping_card
-    if (settings.name == '/order/shopping_card') {}
+    if (settings.name == '/order/shopping_card') {
+      return GetPageRoute(
+        settings: settings,
+        page: () => ShoopingCardPage(), //
+        binding: ShoopingCardBindings(),
+        transition: Transition.fadeIn,
+      );
+    }
   }
 }

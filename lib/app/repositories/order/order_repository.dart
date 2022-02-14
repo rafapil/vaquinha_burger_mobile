@@ -1,5 +1,6 @@
-import './order_repository.dart';
+import 'package:vaquinha_burger_mobile/app/models/order.dart';
+import 'package:vaquinha_burger_mobile/app/models/order_pix.dart';
 
-class OrderRepository implements OrderRepository {
-
+abstract class OrderRepository {
+  Future<OrderPix> createOrder(Order order);
 }
